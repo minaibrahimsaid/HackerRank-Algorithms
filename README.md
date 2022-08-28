@@ -200,7 +200,7 @@ const uniqueArray = [...new Set(array)] // [1,2]
 
 ###### 2. max number in array
 
-> get a new array with only the unique elemsnts 
+> get the max number in array
 
 ```javascript
 const array = [1,2,3,5]
@@ -210,7 +210,7 @@ const max =Math.max(...array) //5
 
 ###### 3. min number in array
 
-> get a new array with only the unique elemsnts 
+> get the min number in array
 
 ```javascript
 const array = [1,2,3,5]
@@ -220,12 +220,21 @@ const max =Math.min(...array) //1
 
 ###### 4. count characters in string
 
-> get a new array with only the unique elemsnts 
+> count each character in a string
 
 ```javascript
 const string  ="aabbcc"
 const count = { }
 string.split("").forEach(c => count[c] ? count[c]++ : count[c] = 1) // { a: 2, b: 2, c: 2 }
+```
+##
+
+###### 5. sort array
+
+> sort array ASC
+```javascript
+const array = [5,2,3,1]
+const sortedArray = array.sort() // [1,2,3,4,5]
 ```
 ##
 
