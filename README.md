@@ -186,4 +186,9 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
 
 </details>
 
-##
+
+## :smiley_cat: Author
+
+- [@minaibrahimsaid](https://github.com/minaibrahimsaid/)
+
+Made with &nbsp;❤️&nbsp;
