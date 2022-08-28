@@ -186,6 +186,48 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
 
 </details>
 
+## :blue_book: Tips
+
+###### 1. unique elemnts in array 
+
+> get a new array with only the unique elemsnts 
+
+```javascript
+const array = [1,1,2,2]
+const uniqueArray = [...new Set(array)] // [1,2]
+```
+##
+
+###### 2. max number in array
+
+> get a new array with only the unique elemsnts 
+
+```javascript
+const array = [1,2,3,5]
+const max =Math.max(...array) //5
+```
+##
+
+###### 3. min number in array
+
+> get a new array with only the unique elemsnts 
+
+```javascript
+const array = [1,2,3,5]
+const max =Math.min(...array) //1
+```
+##
+
+###### 4. count characters in string
+
+> get a new array with only the unique elemsnts 
+
+```javascript
+const string  ="aabbcc"
+const count = { }
+string.split("").forEach(c => count[c] ? count[c]++ : count[c] = 1) // { a: 2, b: 2, c: 2 }
+```
+##
 
 ## :smiley_cat: Author
 
