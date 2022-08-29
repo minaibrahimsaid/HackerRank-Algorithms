@@ -11,6 +11,7 @@ This repo is to document **[Hackerrank](https://www.hackerrank.com/dashboard)** 
   - [Two Strings](#two-strings)
   - [Game of Thrones - I](#game-of-thrones)
   - [Strange Counter](#strange-counter)
+  - [Caesar Cipher](#caesar-cipher)
 - [Tips](#Tips)
 
 ## :scroll: Problems
@@ -183,6 +184,55 @@ return head - (t - start);
 note : to calculate the head of the loop I used this formula `[...Array(n-1).keys()].reduce((t, v, i) =>t*2 , 3)`
 
 4-the value should be the head - the different between the time and the start pointer
+
+</details>
+
+##
+
+<details>
+  <summary id="caesar-cipher"><b><u><font size="+2">Caesar Cipher</font></u></b></summary>
+<br/>
+
+**Problem :** https://www.hackerrank.com/challenges/caesar-cipher-1/problem?isFullScreen=false
+
+> some time using two pointer is very good solution
+
+**my solution :**
+
+```js
+  // Write your code here
+  const alphabetLower = 'abcdefghijklmnopqrstuvwxyz'
+  const alphabetUpper = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
+
+  return s
+    .split('')
+    .map((c) => {
+      if (
+        c.charCodeAt() >= 'a'.charCodeAt() &&
+        c.charCodeAt() <= 'z'.charCodeAt()
+      ) {
+        const index = c.charCodeAt() - 'a'.charCodeAt()
+
+        return alphabetLower[(index + k) % 26]
+      }
+
+      if (
+        c.charCodeAt() >= 'A'.charCodeAt() &&
+        c.charCodeAt() <= 'Z'.charCodeAt()
+      ) {
+        const index = c.charCodeAt() - 'A'.charCodeAt()
+
+        return alphabetUpper[(index + k) % 26]
+      }
+      return c
+    })
+    .join('')
+```
+
+**steps :-**  
+1- loop on the string to and replace the character with the correct one  
+                                      
+2- any special character will be the same                   
 
 </details>
 
