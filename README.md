@@ -13,6 +13,7 @@ This repo is to document **[Hackerrank](https://www.hackerrank.com/dashboard)** 
   - [Strange Counter](#strange-counter)
   - [Caesar Cipher](#caesar-cipher)
   - [Flatland Space Stations](#flatland-space-stations)
+  - [Equalize the Array](#equalize-the-arrays)
 - [Tips](#Tips)
 
 ## :scroll: Problems
@@ -262,6 +263,32 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
 3- return the max between the space array and the first and the last elemnt                   
 
 </details>
+
+##
+
+<details>
+  <summary id="equalize-the-arrays"><b><u><font size="+2">Equalize the Array</font></u></b></summary>
+<br/>
+
+**Problem :** https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true
+
+**my solution :**
+
+```js
+  // Write your code here
+  const count = {}
+  arr.forEach((c) => (count[c] ? count[c]++ : (count[c] = 1)))
+  return arr.length - Math.max(...Object.values(count))
+```
+
+**steps :-**  
+1- count each elemnt in the array 
+                                      
+2- the min number should be the array length - the cound of the most repeated elemnet 
+
+
+</details>
+
 
 ## :blue_book: Tips
 
