@@ -12,6 +12,7 @@ This repo is to document **[Hackerrank](https://www.hackerrank.com/dashboard)** 
   - [Game of Thrones - I](#game-of-thrones)
   - [Strange Counter](#strange-counter)
   - [Caesar Cipher](#caesar-cipher)
+  - [Flatland Space Stations](#flatland-space-stations)
 - [Tips](#Tips)
 
 ## :scroll: Problems
@@ -229,10 +230,35 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
     .join('')
 ```
 
+##
+
+<details>
+  <summary id="flatland-space-stations"><b><u><font size="+2">Flatland Space Stations</font></u></b></summary>
+<br/>
+
+**Problem :** https://www.hackerrank.com/challenges/flatland-space-stations/problem?isFullScreen=true
+
+> think about the sort function if we need to get diffrenet bwtween elemnst in array 
+
+**my solution :**
+
+```js
+  const sorted = c.sort((a, b) => a - b)
+  const spaces = []
+  for (let i = 1; i < sorted.length; i++) {
+      const midSpace = sorted[i] -sorted[i - 1]
+      spaces.push(Math.floor(midSpace / 2))
+    
+  }
+  return Math.max(...spaces, n - 1 - sorted.at(-1) , sorted[0])
+```
+
 **steps :-**  
-1- loop on the string to and replace the character with the correct one  
+1- sort the array
                                       
-2- any special character will be the same                   
+2- get the min space between the elemnt
+
+3- return the max between the space array and the first and the last elemnt                   
 
 </details>
 
