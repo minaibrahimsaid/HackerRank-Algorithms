@@ -229,7 +229,8 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
     })
     .join('')
 ```
-
+</details>
+  
 ##
 
 <details>
