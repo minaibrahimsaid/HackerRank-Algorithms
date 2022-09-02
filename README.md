@@ -14,6 +14,7 @@ This repo is to document **[Hackerrank](https://www.hackerrank.com/dashboard)** 
   - [Caesar Cipher](#caesar-cipher)
   - [Flatland Space Stations](#flatland-space-stations)
   - [Equalize the Array](#equalize-the-arrays)
+  - [Minimum Number of Operations to Move All Balls to Each Box](#Minimum-Number-of-Operations-to-Move-All-Balls-to-Each-Box)
 - [Tips](#Tips)
 
 ## :scroll: Problems
@@ -289,6 +290,35 @@ note : to calculate the head of the loop I used this formula `[...Array(n-1).key
 
 </details>
 
+##
+
+<details>
+  <summary id="Minimum-Number-of-Operations-to-Move-All-Balls-to-Each-Box"><b><u><font size="+2">Minimum Number of Operations to Move All Balls to Each Box</font></u></b></summary>
+<br/>
+
+**Problem :** https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
+
+**my solution :**
+
+```js
+  const moves = []
+  const indexes = boxes.split("").map((e, i) => e === '1' ? i : -1).filter(_ => _ >= 0)
+  for (let i = 0; i < boxes.length; i++) {
+    moves[i] = 0
+    for (let j = 0; j < indexes.length; j++) {
+        moves[i] = moves[i] + Math.abs(i - indexes[j])
+    }
+  }
+ return moves 
+```
+
+**steps :-**  
+1- get array of indexes for each '1' elemnt 
+                                      
+2- loop and add the Math.abs(i - indexes[j])
+
+
+</details>
 
 ## :blue_book: Tips
 
